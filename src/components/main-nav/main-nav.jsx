@@ -12,7 +12,7 @@ function MainNav() {
   return (
     <nav className="main-nav">
       {Object.values(TaskType).map((type, i) =>
-        <button 
+        <button
           key={`type-${i}`}
           className={`main-nav__item ${filtering === type && `main-nav__item--active`} `}
           onClick={() => dispatch(setFiltering(type))}

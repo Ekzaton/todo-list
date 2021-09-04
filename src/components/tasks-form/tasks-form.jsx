@@ -8,22 +8,22 @@ import {addTask} from "../../store/actions"
 
 function TasksForm() {
   const dispatch = useDispatch();
-  
+
   const [name, setName] = useState(``);
   const [description, setDescription] = useState(``);
   const [type, setType] = useState(TaskType.WORKING);
 
   return (
     <div className="tasks__form">
-      <form 
+      <form
         className="tasks__item"
         onSubmit={(evt) => {
           evt.preventDefault();
           const newTask = {
-            id: nanoid(), 
-            name: name, 
-            description: description, 
-            type: type, 
+            id: nanoid(),
+            name: name,
+            description: description,
+            type: type,
             isCompleted: false
           };
           dispatch(addTask(newTask));
@@ -50,11 +50,11 @@ function TasksForm() {
           onChange={(evt) => setDescription(evt.target.value)}
           required
         />
-        <select 
+        <select
           value={type}
           onChange={(evt) => setType(evt.target.value)}
         >
-          {Object.values(TaskType).slice(1).map((type) => 
+          {Object.values(TaskType).slice(1).map((type) =>
             <option>{type}</option>
           )}
         </select>

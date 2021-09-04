@@ -48,4 +48,3 @@ export const setSorting = (sorting) => ({
   type: ActionType.SET_SORTING,
   payload: sorting
 });
-

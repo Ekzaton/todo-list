@@ -14,7 +14,7 @@ function TasksList({tasks, isActiveList}) {
   return (
     <ul className="tasks__list">
       <li className="tasks__item tasks__item--header">
-        {isActiveList 
+        {isActiveList
           ? <div className="tasks__sorting"
             onClick={() => {
               if (sorting === SortingType.DEFAULT) {
